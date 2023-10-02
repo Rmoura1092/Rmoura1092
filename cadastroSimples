@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Cadastro {
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> nomes = new ArrayList<String>();
+        ArrayList<String> emails = new ArrayList<String>();
+        
+        System.out.println("Cadastro de Usuários");
+        
+        while (true) {
+            System.out.println("Digite o nome do usuário (ou 'sair' para encerrar): ");
+            String nome = scanner.nextLine();
+            if (nome.equals("sair")) {
+                break;
+            }
+            System.out.println("Digite o e-mail do usuário: ");
+            String email = scanner.nextLine();
+            nomes.add(nome);
+            emails.add(email);
+            break;
+        }
+        
+        System.out.println("Lista de Usuários Cadastrados:");
+        for (int i = 0; i < nomes.size(); i++) {
+            System.out.println("Nome: " + nomes.get(i) + " E-mail: " + emails.get(i));
+        }
+    }
+
+}
