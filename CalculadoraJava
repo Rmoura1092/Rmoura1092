@@ -33,12 +33,12 @@ public class Calculadora {
                     resultado = num1 / num2;
                 } else {
                     System.out.println("Erro: Divisão por zero!");
-                    return; // Encerra o programa
+                    return; 
                 }
                 break;
             default:
                 System.out.println("Operação inválida!");
-                return; // Encerra o programa
+                return; 
         }
 
         System.out.println("Resultado: " + resultado);
